@@ -1,0 +1,1214 @@
+{
+    "subscriptions": [
+      {
+        "id": "2e4ec8e2-b4ad-43e6-b3b4-b7eb989afd0b",
+        "name": "Synapse_Job_Services_Australia_East",
+        "region": "AustraliaEast",
+        "services": ["cluster", "job", "common", "node"],
+        "namingScheme": {
+          "management": "synapse",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary", "failover"]
+        },
+        "azureTrafficManagerEndpoints": {
+          "cluster" : {
+              "0" : "Disabled",
+              "1" : "Enabled"
+          },
+          "job" : {
+              "0" : "Disabled",
+              "1" : "Enabled"
+          }
+        },
+        "isAZ": true,
+        "tokenService": {
+          "instance0": false,
+          "instance1": true,
+          "instance2": false
+        },
+        "deployedIndexes": [1]
+      },
+      {
+        "id": "1594bdbd-d590-4514-bfd4-7ff769fffe6e",
+        "name": "Synapse_Job_Service_Australia_South_East",
+        "region": "AustraliaSoutheast",
+        "services": ["cluster", "job", "common", "node"],
+        "namingScheme": {
+          "management": "synapse",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary", "failover"],
+          "overrides": {
+            "failover": {
+              "name": "synapse-cluster-servcie-prod-australiasoutheast-foserver"
+            }
+          }
+        },
+        "isAZ": false,
+        "tokenService": {
+          "instance0": true,
+          "instance1": false,
+          "instance2": false
+        },
+        "deployedIndexes": [0]
+      },
+      {
+        "id": "28605f34-9337-4a7d-aa0f-3f501f98905b",
+        "name": "Synapse_Job_Services_Brazil_South_1",
+        "region": "BrazilSouth",
+        "services": ["cluster", "job", "common", "node"],
+        "namingScheme": {
+          "management": "synapse",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary", "failover"]
+        },
+        "azureTrafficManagerEndpoints": {
+          "cluster" : {
+              "0" : "Disabled",
+              "1" : "Enabled"
+          },
+          "job" : {
+              "0" : "Disabled",
+              "1" : "Enabled"
+          }
+        },
+        "isAZ": true,
+        "tokenService": {
+          "instance0": false,
+          "instance1": true,
+          "instance2": false
+        },
+        "deployedIndexes": [1]
+      },
+      {
+        "id": "6a5d7770-bc9f-4ab2-8817-07ed0cac5281",
+        "name": "Synapse_Job_Services_Canada_Central_1",
+        "region": "CanadaCentral",
+        "services": ["cluster", "job", "common", "node"],
+        "namingScheme": {
+          "management": "synapse",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary", "failover"]
+        },
+        "azureTrafficManagerEndpoints": {
+          "cluster" : {
+              "0" : "Disabled",
+              "1" : "Disabled",
+              "2" : "Enabled"
+          },
+          "job" : {
+              "0" : "Disabled",
+              "1" : "Enabled",
+              "2" : "Disabled"
+          }
+        },
+        "isAZ": true,
+        "tokenService": {
+          "instance0": false,
+          "instance1": true,
+          "instance2": true
+        },
+        "deployedIndexes": [1,2]
+      },
+      {
+        "id": "1596357d-0863-47b8-ab3b-945cf136364f",
+        "name": "Synapse_Job_Services_Canada_East_1",
+        "region": "CanadaEast",
+        "services": ["cluster", "job", "common", "node"],
+        "namingScheme": {
+          "management": "synapse",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary"]
+        },
+        "isAZ": false,
+        "tokenService": {
+          "instance0": true,
+          "instance1": false,
+          "instance2": false
+        },
+        "deployedIndexes": [0]
+      },
+      {
+        "id": "c099c02f-b7cc-4d2a-a5a2-728983040b65",
+        "name": "Synapse_Job_Services_Central_India_1",
+        "region": "CentralIndia",
+        "services": ["cluster", "job", "common", "node"],
+        "namingScheme": {
+          "management": "synapse",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary", "failover"]
+        },
+        "isAZ": false,
+        "tokenService": {
+          "instance0": true,
+          "instance1": false,
+          "instance2": false
+        },
+        "deployedIndexes": [0]
+      },
+      {
+        "id": "3080be9e-aa2f-440c-ba6e-5b8ba81342d4",
+        "name": "Synapse_Job_Services_Central_US_1",
+        "region": "CentralUS",
+        "services": ["cluster", "job", "common", "node"],
+        "namingScheme": {
+          "management": "synapse",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary", "failover"]
+        },
+        "azureTrafficManagerEndpoints": {
+          "cluster" : {
+              "0" : "Disabled",
+              "1" : "Disabled",
+              "2" : "Enabled"
+          },
+          "job" : {
+              "0" : "Disabled",
+              "1" : "Enabled",
+              "2" : "Disabled"
+          }
+        },
+        "isAZ": true,
+        "tokenService": {
+          "instance0": false,
+          "instance1": true,
+          "instance2": true
+        },
+        "deployedIndexes": [1,2]
+      },
+      {
+        "id": "28e0ae08-bd0a-4254-b17d-9668e7040d2b",
+        "name": "Synapse_Job_Services_East_Asia",
+        "region": "EastAsia",
+        "services": ["cluster", "job", "common", "node"],
+        "namingScheme": {
+          "management": "synapse",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary", "failover"]
+        },
+        "isAZ": false,
+        "tokenService": {
+          "instance0": true,
+          "instance1": false,
+          "instance2": false
+        },
+        "deployedIndexes": [0]
+      },
+      {
+        "id": "bd69ccb3-79ce-4be5-a1b0-b31f8d658c46",
+        "name": "Synapse_Job_Services_East_US2_EUAP",
+        "region": "EastUS2EUAP",
+        "services": ["cluster", "job", "common", "node"],
+        "namingScheme": {
+          "management": "arcadia",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary", "failover"]
+        },
+        "sqlServerFailoverGroup": {
+          "overrides": {
+            "name": "arcadia-cluster-service-prod-eastus2euap-server-fg"
+          }
+        },
+        "notEv2ShellExtensionCompatible": true,
+        "isAZ": true,
+        "tokenService": {
+          "instance0": false,
+          "instance1": true,
+          "instance2": false
+        },
+        "deployedIndexes": [1]
+      },
+      {
+        "id": "155bd811-91c9-40e6-95af-0ec63d22fc90",
+        "name": "Synapse_Job_Services_East_US2",
+        "region": "EastUS2",
+        "services": ["cluster", "job", "common", "node"],
+        "namingScheme": {
+          "management": "synapse",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary", "failover"],
+          "overrides": {
+            "failover": { "name": "synapse-cluster-servcie-prod-eastus2-foserver" }
+          }
+        },
+        "azureTrafficManagerEndpoints": {
+          "cluster" : {
+              "0" : "Disabled",
+              "1" : "Disabled",
+              "2" : "Enabled"
+          },
+          "job" : {
+              "0" : "Disabled",
+              "1" : "Disabled",
+              "2" : "Enabled"
+          }
+        },
+        "isAZ": true,
+        "tokenService": {
+          "instance0": false,
+          "instance1": true,
+          "instance2": true
+        },
+        "deployedIndexes": [1,2]
+      },
+      {
+        "id": "18f99b21-9699-4015-ba9d-5c872bbd7a47",
+        "name": "Synapse_Job_Services_West_US2_East_US",
+        "region": "EastUS",
+        "services": ["cluster", "job", "common"],
+        "namingScheme": {
+          "management": "arcadia",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary", "failover"],
+          "overrides": {
+            "primary": { "suffix": "db-server" }
+          }
+        },
+        "sqlServerPrimaryDatabase": {
+          "overrides": {
+            "name": "arcadia-cluster-service-db"
+          }
+        },
+        "azureTrafficManagerEndpoints": {
+          "cluster" : {
+              "0" : "Disabled",
+              "1" : "Disabled",
+              "2" : "Enabled"
+          },
+          "job" : {
+              "0" : "Disabled",
+              "1" : "Disabled",
+              "2" : "Enabled"
+          }
+        },
+        "isAZ": true,
+        "tokenService": {
+          "instance0": false,
+          "instance1": true,
+          "instance2": true
+        },
+        "deployedIndexes": [1,2]
+      },
+      {
+        "id": "1579f893-8ad8-4b8e-9268-e105fcb32cfd",
+        "name": "Synapse_Job_Services_France_Central_1",
+        "region": "FranceCentral",
+        "services": ["cluster", "job", "common", "node"],
+        "namingScheme": {
+          "management": "synapse",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary"]
+        },
+        "azureTrafficManagerEndpoints": {
+          "cluster" : {
+              "0" : "Disabled",
+              "1" : "Enabled"
+          },
+          "job" : {
+              "0" : "Disabled",
+              "1" : "Enabled",
+              "2" : "Disabled"
+          }
+        },
+        "isAZ": true,
+        "tokenService": {
+          "instance0": false,
+          "instance1": true,
+          "instance2": false
+        },
+        "deployedIndexes": [1]
+      },
+      {
+        "id": "ff1a7641-88a2-482d-af65-a884e024a2ce",
+        "name": "Synapse_Job_Services_France_South_1",
+        "region": "FranceSouth",
+        "services": ["cluster", "job", "common", "node"],
+        "namingScheme": {
+          "management": "synapse",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary"]
+        },
+        "azureTrafficManagerEndpoints": {
+          "cluster" : {
+              "0" : "Enabled"
+          },
+          "job" : {
+              "0" : "Enabled"
+          }
+        },
+        "notEv2ShellExtensionCompatible": true,
+        "isAZ": false,
+        "tokenService": {
+          "instance0": true,
+          "instance1": false,
+          "instance2": false
+        },
+        "deployedIndexes": [0]
+      },
+      {
+        "id": "c95a8739-c25d-48e2-bb86-95c99f3a2e51",
+        "name": "Synapse_Job_Services_Germany_North_1",
+        "region": "GermanyNorth",
+        "services": ["cluster", "job", "common", "node"],
+        "namingScheme": {
+          "management": "synapse",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary"]
+        },
+        "azureTrafficManagerEndpoints": {
+          "cluster" : {
+              "0" : "Enabled"
+          },
+          "job" : {
+              "0" : "Enabled"
+          }
+        },
+        "notEv2ShellExtensionCompatible": true,
+        "isAZ": false,
+        "deployedIndexes": [0]
+      },
+      {
+        "id": "cf3cd1f8-3092-4168-aeb5-2cc74be80ab5",
+        "name": "Synapse_Job_Services_Germany_West_Central_1",
+        "region": "GermanyWestCentral",
+        "services": ["cluster", "job", "common", "node"],
+        "namingScheme": {
+          "management": "synapse",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary"]
+        },
+        "azureTrafficManagerEndpoints": {
+          "cluster" : {
+              "0" : "Disabled",
+              "1" : "Enabled"
+          },
+          "job" : {
+              "0" : "Disabled",
+              "1" : "Enabled"
+          }
+        },
+        "isAZ": true,
+        "tokenService": {
+          "instance0": false,
+          "instance1": true,
+          "instance2": false
+        },
+        "deployedIndexes": [1]
+      },
+      {
+        "id": "566418c0-e17a-4abe-afd3-19b358e17ea7",
+        "name": "Synapse_Job_Service_Italy_North_01",
+        "region": "ItalyNorth",
+        "services": ["cluster", "job", "common", "node"],
+        "namingScheme": {
+          "management": "synapse",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary"]
+        },
+        "notEv2ShellExtensionCompatible": true,
+        "isAZ": true,
+        "tokenService": {
+          "instance0": false,
+          "instance1": false,
+          "instance2": true
+        },
+        "deployedIndexes": [2]
+      },
+      {
+        "id": "975fe3ab-8c7e-421e-9ac5-4e778f398523",
+        "name": "Synapse_Job_Service_Israel_Central_01",
+        "region": "IsraelCentral",
+        "services": ["cluster", "job", "common", "node"],
+        "namingScheme": {
+          "management": "synapse",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary"]
+        },
+        "notEv2ShellExtensionCompatible": true,
+        "isAZ": true,
+        "tokenService": {
+          "instance0": false,
+          "instance1": false,
+          "instance2": true
+        },
+        "deployedIndexes": [2]
+      },
+      {
+        "id": "56c5ce85-1e12-49dc-bd2c-aea1ef83fad6",
+        "name": "Synapse_Job_Services_Japan_East_1",
+        "region": "JapanEast",
+        "services": ["cluster", "job", "common", "node"],
+        "namingScheme": {
+          "management": "synapse",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary", "failover"]
+        },
+        "azureTrafficManagerEndpoints": {
+          "cluster" : {
+              "0" : "Disabled",
+              "1" : "Enabled"
+          },
+          "job" : {
+              "0" : "Disabled",
+              "1" : "Enabled"
+          }
+        },
+        "isAZ": true,
+        "tokenService": {
+          "instance0": false,
+          "instance1": true,
+          "instance2": false
+        },
+        "deployedIndexes": [1]
+      },
+      {
+        "id": "8daf68c3-b93d-463b-b44b-caf8fd1bb903",
+        "name": "Synapse_Job_Services_Japan_West_1",
+        "region": "JapanWest",
+        "services": ["cluster", "job", "common", "node"],
+        "namingScheme": {
+          "management": "synapse",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary"]
+        },
+        "isAZ": false,
+        "tokenService": {
+          "instance0": true,
+          "instance1": false,
+          "instance2": false
+        },
+        "deployedIndexes": [0]
+      },
+      {
+        "id": "d553b66a-53de-47fb-bc4a-a8d47435c36c",
+        "name": "Synapse_Spark_Services_Hosting_Jio_WestIndia_01",
+        "region": "JioIndiaWest",
+        "services": ["cluster", "job", "common", "node"],
+        "namingScheme": {
+          "management": "synapse",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary"]
+        },
+        "azureTrafficManagerEndpoints": {
+          "cluster" : {
+              "0" : "Enabled"
+          },
+          "job" : {
+              "0" : "Enabled"
+          }
+        },
+        "isAZ": false,
+        "tokenService": {
+          "instance0": true,
+          "instance1": false,
+          "instance2": false
+        },
+        "deployedIndexes": [0]
+      },
+      {
+        "id": "557a4ed7-d47a-4fa2-852e-2f43437bd623",
+        "name": "Synapse_Job_Services_Korea_Central_1",
+        "region": "KoreaCentral",
+        "services": ["cluster", "job", "common", "node"],
+        "namingScheme": {
+          "management": "synapse",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary", "failover"]
+        },
+        "azureTrafficManagerEndpoints": {
+          "job" : {
+              "2" : "Disabled"
+          }
+        },
+        "isAZ": true,
+        "tokenService": {
+          "instance0": true,
+          "instance1": true,
+          "instance2": false
+        },
+        "deployedIndexes": [0,1]
+      },
+      {
+        "id": "bb1796a4-3da8-46ec-b2f1-c3d6e4027a75",
+        "name": "Synapse_Job_Services_Mexico_Central_1",
+        "region": "MexicoCentral",
+        "services": ["cluster", "job", "common", "node"],
+        "namingScheme": {
+          "management": "synapse",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary"]
+        },
+        "quota": {
+          "sku": "Ddsv5",
+          "cores": "4000"
+        },
+        "isAZ": true,
+        "notEv2ShellExtensionCompatible": true,
+        "tokenService": {
+          "instance0": false,
+          "instance1": false,
+          "instance2": true
+        },
+        "deployedIndexes": [2]
+      },
+      {
+        "id": "2bfcb4e5-f689-47d2-a9f1-438288fbc1bc",
+        "name": "Synapse_Job_Services_North_Central_US_1",
+        "region": "NorthCentralUS",
+        "services": ["cluster", "job", "common", "node"],
+        "namingScheme": {
+          "management": "synapse",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary", "failover"]
+        },
+        "isAZ": false,
+        "tokenService": {
+          "instance0": true,
+          "instance1": false,
+          "instance2": false
+        },
+        "deployedIndexes": [0]
+      },
+      {
+        "id": "8aa52219-b5b5-47d4-a6f9-256b5a3a97ea",
+        "name": "Synapse_Job_Services_North_Europe",
+        "region": "NorthEurope",
+        "services": ["cluster", "job", "common"],
+        "namingScheme": {
+          "management": "arcadia",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary", "failover"]
+        },
+        "sqlServerPrimaryDatabase": {
+          "overrides": {
+            "name": "arcadia-cluster-service-prod-northeurope-database"
+          }
+        },
+        "isAZ": true,
+        "tokenService": {
+          "instance0": false,
+          "instance1": true,
+          "instance2": true
+        },
+        "deployedIndexes": [1,2]
+      },
+      {
+        "id": "13a32af4-b3ea-49ec-9572-4edcb5dcf4f5",
+        "name": "Synapse_Job_Services_Norway_East_1",
+        "region": "NorwayEast",
+        "services": ["cluster", "job", "common", "node"],
+        "namingScheme": {
+          "management": "synapse",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary"]
+        },
+        "isAZ": false,
+        "tokenService": {
+          "instance0": true,
+          "instance1": false,
+          "instance2": false
+        },
+        "deployedIndexes": [0]
+      },
+      {
+        "id": "dcfade83-cc02-4101-9adb-a6f118bcbd3b",
+        "name": "Synapse_Job_Service_Poland_Central_01",
+        "region": "PolandCentral",
+        "services": ["cluster", "job", "common", "node"],
+        "namingScheme": {
+          "management": "synapse",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary"]
+        },
+        "azureTrafficManagerEndpoints": {
+          "cluster" : {
+              "0" : "Disabled",
+              "2" : "Enabled"
+          },
+          "job" : {
+              "0" : "Disabled",
+              "2" : "Enabled"
+          }
+        },
+        "notEv2ShellExtensionCompatible": true,
+        "isAZ": true,
+        "tokenService": {
+          "instance0": false,
+          "instance1": false,
+          "instance2": true
+        },
+        "deployedIndexes": [2]
+      },
+      {
+        "id": "b57c03c5-4259-4720-b30b-25e92f13b735",
+        "name": "Synapse_Job_Services_Qatar_Central_1",
+        "region": "QatarCentral",
+        "services": ["cluster", "job", "common", "node"],
+        "namingScheme": {
+          "management": "synapse",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary"]
+        },
+        "azureTrafficManagerEndpoints": {
+          "cluster" : {
+              "1" : "Enabled"
+          },
+          "job" : {
+              "1" : "Enabled"
+          }
+        },
+        "notEv2ShellExtensionCompatible": true,
+        "isAZ": true,
+        "tokenService": {
+          "instance0": false,
+          "instance1": true,
+          "instance2": false
+        },
+        "deployedIndexes": [1]
+      },
+      {
+        "id": "511b09ff-c9a8-4f33-970e-ae7a8dd20d61",
+        "name": "Synapse_Job_Services_South_Africa_North_1",
+        "region": "SouthAfricaNorth",
+        "services": ["cluster", "job", "common", "node"],
+        "namingScheme": {
+          "management": "synapse",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary"]
+        },
+        "azureTrafficManagerEndpoints": {
+          "job" : {
+              "0" : "Enabled",
+              "1" : "Enabled"
+          }
+        },
+        "isAZ": false,
+        "tokenService": {
+          "instance0": true,
+          "instance1": false,
+          "instance2": false
+        },
+        "deployedIndexes": [0]
+      },
+      {
+        "id": "4f56e448-b9cb-4b56-95a0-d86e862508b5",
+        "name": "Synapse_Job_Services_South_Central_US",
+        "region": "SouthCentralUS",
+        "services": ["cluster", "job", "common", "node"],
+        "namingScheme": {
+          "management": "synapse",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary", "failover"]
+        },
+        "azureTrafficManagerEndpoints": {
+          "cluster" : {
+              "0" : "Disabled",
+              "1" : "Enabled"
+          },
+          "job" : {
+              "0" : "Disabled",
+              "1" : "Enabled",
+              "2" : "Disabled"
+          }
+        },
+        "isAZ": true,
+        "tokenService": {
+          "instance0": false,
+          "instance1": true,
+          "instance2": false
+        },
+        "deployedIndexes": [1]
+      },
+      {
+        "id": "965a4376-8839-443b-9ccd-136d7261bc5d",
+        "name": "Synapse_Job_Services_South_East_Asia",
+        "region": "SoutheastAsia",
+        "services": ["cluster", "job", "common", "node"],
+        "namingScheme": {
+          "management": "synapse",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary", "failover"]
+        },
+        "azureTrafficManagerEndpoints": {
+          "cluster" : {
+              "0" : "Disabled",
+              "1" : "Enabled"
+          },
+          "job" : {
+              "0" : "Disabled",
+              "1" : "Enabled"
+          }
+        },
+        "isAZ": true,
+        "tokenService": {
+          "instance0": false,
+          "instance1": true,
+          "instance2": false
+        },
+        "deployedIndexes": [1]
+      },
+      {
+        "id": "0b79287a-1da3-44a1-8bba-9175d7e366a7",
+        "name": "Synapse_Job_Services_South_India_1",
+        "region": "SouthIndia",
+        "services": ["cluster", "job", "common", "node"],
+        "namingScheme": {
+          "management": "synapse",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary"]
+        },
+        "azureTrafficManagerEndpoints": {
+          "cluster" : {
+              "0" : "Enabled"
+          },
+          "job" : {
+              "0" : "Enabled"
+          }
+        },
+        "isAZ": false,
+        "tokenService": {
+          "instance0": true,
+          "instance1": false,
+          "instance2": false
+        },
+        "deployedIndexes": [0]
+      },
+      {
+        "id": "fd49d08d-781a-4125-85d7-86375eb9d467",
+        "name": "Synapse_Job_Service_Spain_Central_01",
+        "region": "SpainCentral",
+        "services": ["cluster", "job", "common", "node"],
+        "namingScheme": {
+          "management": "synapse",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary"]
+        },
+        "notEv2ShellExtensionCompatible": true,
+        "tokenService": {
+          "instance0": false,
+          "instance1": false,
+          "instance2": true
+        },
+        "deployedIndexes": [2]
+      },
+      {
+        "id": "d6f48d64-3f94-4968-980d-5e8eb2da23cb",
+        "name": "Synapse_Spark_Services_Hosting_SwedenCentral_01",
+        "region": "SwedenCentral",
+        "services": ["cluster", "job", "common", "node"],
+        "namingScheme": {
+          "management": "synapse",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary"]
+        },
+        "azureTrafficManagerEndpoints": {
+          "cluster" : {
+              "0" : "Enabled"
+          },
+          "job" : {
+              "0" : "Enabled"
+          }
+        },
+        "isAZ": false,
+        "tokenService": {
+          "instance0": true,
+          "instance1": false,
+          "instance2": false
+        },
+        "deployedIndexes": [0]
+      },
+      {
+        "id": "12476c15-3d7f-4a03-bbea-c452937d15ce",
+        "name": "Synapse_Job_Services_Switzerland_North_1",
+        "region": "SwitzerlandNorth",
+        "services": ["cluster", "job", "common", "node"],
+        "namingScheme": {
+          "management": "synapse",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary"]
+        },
+        "isAZ": false,
+        "tokenService": {
+          "instance0": true,
+          "instance1": false,
+          "instance2": false
+        },
+        "deployedIndexes": [0]
+      },
+      {
+        "id": "cbc14713-1db3-4348-9c55-50d8f88e917d",
+        "name": "Synapse_Job_Services_Switzerland_West_1",
+        "region": "SwitzerlandWest",
+        "services": ["cluster", "job", "common", "node"],
+        "namingScheme": {
+          "management": "synapse",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary"]
+        },
+        "azureTrafficManagerEndpoints": {
+          "cluster" : {
+              "0" : "Enabled"
+          },
+          "job" : {
+              "0" : "Enabled"
+          }
+        },
+        "isAZ": false,
+        "tokenService": {
+          "instance0": true,
+          "instance1": false,
+          "instance2": false
+        },
+        "deployedIndexes": [0]
+      },
+      {
+        "id": "3240aaa7-e582-481d-9744-7330c1595d96",
+        "name": "Synapse_Job_Service_TaiwanNorth_01",
+        "region": "TaiwanNorth",
+        "services": ["cluster", "job", "common", "node"],
+        "namingScheme": {
+          "management": "synapse",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary"]
+        },
+        "quota": {
+          "sku": "Ddsv5",
+          "cores": "4000"
+        },
+        "notEv2ShellExtensionCompatible": true,
+        "isAZ": false,
+        "tokenService": {
+          "instance0": false,
+          "instance1": false,
+          "instance2": true
+        },
+        "deployedIndexes": [2]
+      },
+      {
+        "id": "18a6b8d7-249c-4576-b704-f1b4fd5d94bd",
+        "name": "Synapse_Job_Services_UAE_North",
+        "region": "UAENorth",
+        "services": ["cluster", "job", "common", "node"],
+        "namingScheme": {
+          "management": "synapse",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary"]
+        },
+        "isAZ": false,
+        "tokenService": {
+          "instance0": true,
+          "instance1": false,
+          "instance2": false
+        },
+        "deployedIndexes": [0]
+      },
+      {
+        "id": "422f19b8-4e6a-471c-bdef-e3f84b387697",
+        "name": "Synapse_Job_Services_UK_South",
+        "region": "UKSouth",
+        "services": ["cluster", "job", "common", "node"],
+        "namingScheme": {
+          "management": "synapse",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary", "failover"]
+        },
+        "azureTrafficManagerEndpoints": {
+          "cluster" : {
+              "0" : "Disabled",
+              "1" : "Disabled",
+              "2" : "Enabled"
+          },
+          "job" : {
+              "0" : "Disabled",
+              "1" : "Disabled",
+              "2" : "Enabled"
+          }
+        },
+        "isAZ": true,
+        "tokenService": {
+          "instance0": false,
+          "instance1": true,
+          "instance2": true
+        },
+        "deployedIndexes": [1,2]
+      },
+      {
+        "id": "e2c5a911-0039-4b0b-9c08-929b302d0b01",
+        "name": "Synapse_Job_Services_UK_West",
+        "region": "UKWest",
+        "services": ["cluster", "job", "common", "node"],
+        "namingScheme": {
+          "management": "synapse",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary", "failover"]
+        },
+        "isAZ": false,
+        "tokenService": {
+          "instance0": true,
+          "instance1": false,
+          "instance2": false
+        },
+        "deployedIndexes": [0]
+      },
+      {
+        "id": "559eff10-23ab-4d35-a8a0-ba621af7a313",
+        "name": "Synapse_Job_Services_West_Central_US",
+        "region": "WestCentralUS",
+        "services": ["cluster", "job", "common", "node"],
+        "namingScheme": {
+          "management": "synapse",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary", "failover"]
+        },
+        "azureTrafficManagerEndpoints": {
+          "cluster" : {
+              "0" : "Disabled",
+              "2" : "Enabled"
+          },
+          "job" : {
+              "2" : "Disabled"
+          }
+        },
+        "isAZ": false,
+        "tokenService": {
+          "instance0": true,
+          "instance1": false,
+          "instance2": true
+        },
+        "deployedIndexes": [0,2]
+      },
+      {
+        "id": "11d7301a-73bd-4f5d-af14-c1e136c891e0",
+        "name": "Synapse_Job_Services_West_Europe",
+        "region": "WestEurope",
+        "services": ["cluster", "job", "common"],
+        "namingScheme": {
+          "management": "arcadia",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary", "failover"],
+          "overrides": {
+            "primary": { "name": "arcadia-cluster-service-prod-we-server" },
+            "failover": { "name": "arcadia-cluster-service-prod-we-fosever" }
+          }
+        },
+        "sqlServerPrimaryDatabase": {
+          "overrides": {
+            "name": "arcadia-cluster-service-prod-we-database"
+          }
+        },
+        "sqlServerFailoverGroup": {
+          "overrides": {
+            "name": "arcadia-cluster-service-prod-we-fg"
+          }
+        },
+        "isAZ": true,
+        "tokenService": {
+          "instance0": false,
+          "instance1": true,
+          "instance2": true
+        },
+        "deployedIndexes": [1,2]
+      },
+      {
+        "id": "431ae1b7-3769-4a5d-ba2c-eecf22cf6d11",
+        "name": "Synapse_Job_Services_West_India",
+        "region": "WestIndia",
+        "services": ["cluster", "job", "common", "node"],
+        "namingScheme": {
+          "management": "synapse",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary"]
+        },
+        "skip": true,
+        "isAZ": false,
+        "deployedIndexes": [0]
+      },
+      {
+        "id": "18f99b21-9699-4015-ba9d-5c872bbd7a47",
+        "name": "Synapse_Job_Services_West_US2_East_US",
+        "region": "WestUS2",
+        "services": ["cluster", "job", "common"],
+        "namingScheme": {
+          "management": "arcadia",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary", "failover"],
+          "overrides": {
+            "primary": { "suffix": "db-server" }
+          }
+        },
+        "sqlServerPrimaryDatabase": {
+          "overrides": {
+            "name": "arcadia-cluster-service-db"
+          }
+        },
+        "azureTrafficManagerEndpoints": {
+          "cluster" : {
+              "0" : "Disabled",
+              "1" : "Disabled",
+              "2" : "Enabled"
+          },
+          "job" : {
+              "0" : "Disabled",
+              "1" : "Enabled"
+          }
+        },
+        "isAZ": true,
+        "tokenService": {
+          "instance0": false,
+          "instance1": true,
+          "instance2": true
+        },
+        "deployedIndexes": [1,2]
+      },
+      {
+        "id": "67a68443-e694-49ec-9b59-d57266580a75",
+        "name": "Synapse_Spark_Services_Hosting_WestUS3_01",
+        "region": "WestUS3",
+        "services": ["cluster", "job", "common", "node"],
+        "namingScheme": {
+          "management": "synapse",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary", "failover"]
+        },
+        "azureTrafficManagerEndpoints": {
+          "cluster" : {
+              "0" : "Disabled",
+              "1" : "Disabled",
+              "2" : "Enabled"
+          },
+          "job" : {
+              "0" : "Disabled",
+              "1" : "Enabled",
+              "2" : "Disabled"
+          }
+        },
+        "isAZ": true,
+        "tokenService": {
+          "instance0": false,
+          "instance1": true,
+          "instance2": true
+        },
+        "deployedIndexes": [1,2]
+      },
+      {
+        "id": "53837d56-4040-4c4f-b633-8c704b48cbf4",
+        "name": "Synapse_Job_Services_West_US",
+        "region": "WestUS",
+        "services": ["cluster", "job", "common", "node"],
+        "namingScheme": {
+          "management": "synapse",
+          "deployment": "synapse"
+        },
+        "sqlServer": {
+          "roles": ["primary", "failover"],
+          "overrides": {
+            "failover": { "name": "synapse-cluster-servcie-prod-westus-foserver" }
+          }
+        },
+        "azureTrafficManagerEndpoints": {
+          "cluster" : {
+              "0" : "Disabled",
+              "2" : "Enabled"
+          },
+          "job" : {
+              "0" : "Disabled",
+              "2" : "Enabled"
+          }
+        },
+        "isAZ": false,
+        "tokenService": {
+          "instance0": true,
+          "instance1": false,
+          "instance2": true
+        },
+        "deployedIndexes": [0,2]
+      }
+    ]
+  }

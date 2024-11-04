@@ -1,0 +1,107 @@
+#
+# Template: Batch deployment stages for Synapse.
+#
+
+parameters:
+  # The product the deployment is for.
+  - name: product
+    type: string
+    values:
+      - Synapse
+    default: Synapse
+
+  # List of jobs to execute per region.
+  - name: jobs
+    type: jobList
+
+  # Whether to run each jobList against the region's cluster indexes.
+  - name: useClusterIndexes
+    type: boolean
+    default: true
+
+  # List of cluster index to deploy to per region.
+  - name: clusterIndexOverrides
+    type: object
+    default: {}
+
+  # Whether to deploy to PPE.
+  - name: deployToPPE
+    type: boolean
+    default: false
+
+  # Default batches for each product are defined here.
+  # DO NOT override in calling pipelines and/or templates.
+  # NOTE: Keep the regions in alphabetical order within each environment.
+  - name: batches
+    type: object
+    default:
+      PPE: # You can add your PPE regions here
+        PPE_SouthCentralUS: [2]
+        # Add more PPE regions as needed
+      NonPPE: # This is where you'll put your production regions
+        Batch1:
+          Prod_EastUS2EUAP: [1, 2] # CS uses index 1, JS uses index 2.
+        Batch2:
+          Prod_WestCentralUS: [0, 2]
+        Batch3:
+          Prod_SoutheastAsia: [1]
+        Batch4:
+          Prod_AustraliaEast: [1]
+        Batch5:
+          Prod_BrazilSouth: [1]
+          Prod_CanadaEast: [0]
+          Prod_FranceCentral: [1]
+          Prod_JapanWest: [0]
+          Prod_JioIndiaWest: [0]
+          Prod_KoreaCentral: [0, 1]
+          Prod_NorthCentralUS: [0]
+          Prod_NorthEurope: [1, 2]
+          Prod_UKSouth: [1, 2]
+          Prod_WestUS2: [1, 2]
+        Batch6:
+          Prod_CentralIndia: [0]
+          Prod_CentralUS: [1, 2]
+          Prod_FranceSouth: [0]
+          Prod_GermanyWestCentral: [1]
+          Prod_JapanEast: [1]
+          Prod_NorwayEast: [0]
+          Prod_SouthAfricaNorth: [0]
+          Prod_SouthIndia: [0]
+          Prod_SwedenCentral: [0]
+          Prod_SwitzerlandNorth: [0]
+          Prod_UAENorth: [0]
+          Prod_WestUS3: [1, 2]
+          FF_USGovArizona: [0]
+          FF_USGovVirginia: [1]
+          MC_ChinaEast3: [0]
+          MC_ChinaNorth2: [0]
+        Batch7:
+          Prod_AustraliaSoutheast: [0]
+          Prod_CanadaCentral: [1, 2]
+          Prod_EastAsia: [0]
+          Prod_EastUS: [1, 2]
+          Prod_EastUS2: [1, 2]
+          Prod_ItalyNorth: [2]
+          Prod_IsraelCentral: [2]
+          Prod_MexicoCentral: [2]
+          Prod_PolandCentral: [2]
+          Prod_QatarCentral: [1]
+          Prod_SouthCentralUS: [1]
+          Prod_SpainCentral: [2]
+          Prod_SwitzerlandWest: [0]
+          Prod_UKWest: [0]
+          Prod_WestEurope: [1, 2]
+          Prod_WestUS: [0, 2]
+          FF_USGovTexas: [0]
+          MC_ChinaEast2: [0]
+          MC_ChinaNorth3: [1]
+
+stages:
+  - template: batch-deployment.stages.yml 
+    parameters:
+      product: ${{ parameters.product }}
+      jobs: ${{ parameters.jobs }}
+      useClusterIndexes: ${{ parameters.useClusterIndexes }}
+      clusterIndexOverrides: ${{ parameters.clusterIndexOverrides }} # JS apps have cluster index overrides.
+      deployToPPE: ${{ parameters.deployToPPE }}
+      batches: ${{ parameters.batches }} 

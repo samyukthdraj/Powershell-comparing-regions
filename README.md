@@ -1,0 +1,1 @@
+was assigned a task to create a powershell script that has the regions from the yaml code and the locations from the json file compared and then the output should show which regions are in both yaml and json, which are only in json/yaml.
